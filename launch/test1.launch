@@ -1,0 +1,16 @@
+<launch>
+  <!-- <arg name="gui" default="false"/> -->
+  <!-- Set tf -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="world_to_map" args="0 0 0 0 0 0 world map 100" /> -->
+
+
+  <!-- <arg name="map_filepath" value="$(find agv_sim)/../../data/map/amcl/osaki_testfield_3f_1104.yaml" />  -->
+
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_filepath)" /> -->
+
+
+
+  <!-- MCL -->
+  <include file="$(find emcl2)/launch/emcl2.launch"/> 
+
+</launch>

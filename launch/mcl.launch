@@ -1,4 +1,10 @@
 <launch>
+
+   
+  <arg name="map_filepath" value="$(find agv_sim)/../../data/map/amcl/osaki_testfield_3f_1104.yaml" />
+
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_filepath)" />
+
   <!-- Arguments -->
   <arg name="scan_topic"     default="scan"/>
   <arg name="initial_pose_x" default="-2.0"/>
@@ -6,9 +12,9 @@
   <arg name="initial_pose_a" default="0.0"/>
 
   <!-- MCL -->
-  <node pkg="emcl" type="mcl_node" name="mcl_node" output="screen">
+  <node pkg="emcl2" type="emcl2_node" name="emcl2_node" output="screen">
 
-    <param name="odom_freq"                 value="20"/>
+    <param name="odom_freq"                 value="50"/>
     <param name="num_particles"             value="500"/>
 
     <param name="odom_frame_id"             value="odom"/>
@@ -19,9 +25,9 @@
     <param name="initial_pose_y"            value="$(arg initial_pose_y)"/>
     <param name="initial_pose_a"            value="$(arg initial_pose_a)"/>
 
-    <param name="odom_fw_dev_per_fw"       value="0.19"/>
+    <param name="odom_fw_dev_per_fw"       value="0.10"/>
     <param name="odom_fw_dev_per_rot"      value="0.0001"/>
-    <param name="odom_rot_dev_per_fw"      value="0.13"/>
+    <param name="odom_rot_dev_per_fw"      value="0.19"/>
     <param name="odom_rot_dev_per_rot"     value="0.2"/>
 
     <param name="laser_likelihood_max_dist" value="0.2"/>
@@ -34,4 +40,3 @@
 
   </node>
 </launch>
-
