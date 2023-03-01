@@ -14,7 +14,7 @@
   <!-- MCL -->
   <node pkg="emcl2" type="emcl2_node" name="emcl2_node" output="screen">
 
-    <param name="odom_freq"                 value="50"/>
+    <param name="odom_freq"                 value="100"/>
     <param name="num_particles"             value="500"/>
 
     <param name="odom_frame_id"             value="odom"/>

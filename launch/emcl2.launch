@@ -3,7 +3,7 @@
   <!-- <node pkg="tf" type="static_transform_publisher" name="baseframe_to_baselink" args="0 0 0 0 0 0 base_footprint base_link 100" />  -->
 
   <!-- Set tf -->
-  <node pkg="tf" type="static_transform_publisher" name="world_to_map" args="0 0 0 0 0 0 world map 100" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="world_to_map" args="0 0 0 0 0 0 world map 100" /> -->
 
   <!-- <arg name="map_filepath" value="$(find agv_sim)/../../data/map/amcl/osaki_testfield_3f_1104.yaml" /> -->
 
@@ -39,13 +39,13 @@
     <param name="odom_rot_dev_per_fw"      value="0.05"/>
     <param name="odom_rot_dev_per_rot"     value="0.3"/>
 
-    <param name="laser_likelihood_max_dist" value="0.2"/>
+    <param name="laser_likelihood_max_dist" value="0.15"/>
 
-    <param name="alpha_threshold" value="0.5"/>
-    <param name="open_space_threshold" value="0.05"/>
+    <param name="alpha_threshold" value="0.3"/>
+    <param name="open_space_threshold" value="0.08"/>
 
     <param name="expansion_radius_position" value="0.1"/>
-    <param name="expansion_radius_orientation" value="0.2"/>
+    <param name="expansion_radius_orientation" value="0.1"/>
 
     <param name="range_threshold" value="0.3"/>
 
